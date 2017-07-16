@@ -27,7 +27,7 @@
 		<!-- SPRING MVC -->
 		<dependency>
 			<groupId>org.springframework</groupId>
-			<artifactId>spring-webmvc</artifactId>
+			<artifactId>spring-context</artifactId>
 			<version>${springmvc.version}</version>
 		</dependency>
 

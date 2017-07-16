@@ -19,13 +19,19 @@
 			<version>${javaee.version}</version>
 			<scope>provided</scope>
 		</dependency>
+		<!-- Lining backend -->
+		<dependency>
+			<groupId>com.ank</groupId>
+			<artifactId>shoppingbackend</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 		<!-- SPRING MVC -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
 			<version>${springmvc.version}</version>
 		</dependency>
-<!-- JSTL -->
+		<!-- JSTL -->
 		<dependency>
 			<groupId>jstl</groupId>
 			<artifactId>jstl</artifactId>
