@@ -1,5 +1,12 @@
 package com.ank.shoppingbackend.dto;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Category {
 
 	public int getId() {
@@ -23,15 +30,15 @@ public class Category {
 	}
 
 	public void setDescription(String description) {
-		description = description;
+		this.description = description;
 	}
 
-	public String getImageURL() {
-		return imageURL;
+	public String getImageurl() {
+		return imageurl;
 	}
 
-	public void setImageURL(String imageURL) {
-		this.imageURL = imageURL;
+	public void setImageurl(String imageURL) {
+		this.imageurl = imageURL;
 	}
 
 	public boolean isActive() {
@@ -42,10 +49,20 @@ public class Category {
 		this.active = active;
 	}
 
+	@Override
+	public String toString() {
+		return "Category [id=" + id + ", name=" + name + ", description=" + description + ", imageURL=" + imageurl
+				+ ", active=" + active + "]";
+	}
+
 	// private Fields
+	@Id
+	@GeneratedValue(strategy= GenerationType.IDENTITY)
 	private int id;
 	private String name;
 	private String description;
-	private String imageURL;
+	@Column(name="IMAGE_URL")
+	private String imageurl;
+	@Column(name="is_active")
 	private boolean active;
 }
